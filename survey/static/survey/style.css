@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+} 
+ body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    margin-bottom: 100%;
+    font-family: "Tw Cen MT", sans-serif;
+    font-size: 12pt;
+} 
+.header-bg {
+    background-color: #006400 !important;
+}
+.bold {
+    font-weight: bold;
+  }
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+.merge{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+    input[type="text"],
+    textarea {
+    width: 100%; 
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+    input[name="change"]{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+    
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+    
+
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 30px;
+      }
+  
+      /* hover state for the submit button */
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+#email,#phone,#designation,#name,#county-name,#current-management,#facilities-number,#specific-features,#challenges{
+  border: 1px solid #006400;
+  outline: none;
+  box-shadow: none;
+  
+}

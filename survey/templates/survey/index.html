@@ -1,0 +1,211 @@
+{%load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konza Data Centre HMS Questionnaire Survey</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'survey/style.css'%}">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="container border border-4 border-primary">
+    <header class="header-bg py-2 ">
+      <div class="container text-center">
+        <h4 class="text-white">
+          Konza Data Centre Healthcare Management System (HMS) Questionnaire
+          Survey
+        </h4>
+      </div>
+    </header>
+    <div class="container mt-3">
+        <div class="form-group">
+            <p class="bold" style="font-size: 12;">The Healthcare Management System (HMS) is a cross‐functional healthcare management platform that facilitates the effective and efficient management of a county’s entire healthcare system, managing and interconnecting all healthcare facilities from level 1 all the way to level 5, and further supporting CHWs/CHVs as well as Public Health management.</p>
+            <p>Our clients and facilities that use our platform do take pride in the fact that we have had significant impact in enhancing their care for their patients, markedly improved their financial performance, provided them with critical insights and controls at supply chain and provided them with research and in-depth analytics both historical and predictive to enable them improve patient care and their bottom line.</p>
+            <p>We highlight the impact we have had in four critical areas, enumerated below:</p>
+
+            <a href="#paragraph" data-bs-toggle="collapse"  class="h4 fw-bold text-center" style="text-decoration: none; color: black;"> Financial <small style=" font-size:medium;" > click to view </small></a>
+            
+            <div id="paragraph" class="collapse show">
+             <p class="alert alert-success">Across all our clients, we have seen a 38% increase in financial 
+                 performance upon the installation of the system, with a 18% increase in 
+                 facilities that had a system before and a 60% increase in facilities that were 
+                 moving from a paper/manual based operation.</p>
+             <p>We have not seen any decline in revenue from any client
+                  who has setup our platform. Most clients attribute this to the controls 
+                  provided by the Collabmed platform.</p>
+              </div>
+            <div class="clinical mt-3">
+              <a href="#clinical" data-bs-toggle="collapse"  class="h4 fw-bold text-center" style="text-decoration: none; color: black;"> Clinical care<small style=" font-size:medium; "> click to view</small></a> 
+                <div id="clinical" class="collapse show">
+               <p class="alert alert-success">
+                 This is the crux of healthcare and this is where we have 
+                 had the greatest impact. The goal of automation is to significantly improve 
+                 patient care, at individual patient level and as well as enhancing patient care 
+                 in general by relying on insights generated from patient care at the facility. </p>            
+               </div>
+            </div> 
+            <div class="throughput mt-3">
+              <a href="#throughput" data-bs-toggle="collapse"  class="h4 fw-bold text-center" style="text-decoration: none; color: black;"> Patient throughput</a> <small> click to view</small>
+              <div id="throughput" class="collapse show">
+              <p class="alert alert-success">We have seen a significant increase in patient traffic, 
+                brought about by the efficiencies of the Collabmed platform.
+                 An increase in 24% patients seen throughput on a daily basis is the median 
+                 our clients experience</p>
+                </div>
+              </div>
+              <div class="engagement mt-3">
+                <a href="#engagement" data-bs-toggle="collapse"  class="h4 fw-bold text-center" style="text-decoration: none; color: black;"> Patient engagement</a> <small> click to view</small>
+                <div id="engagement" class="collapse show">
+                 <p class="alert alert-success">A reduction in attrition rates for appointments and medications is another
+                  positive factor we have analysed with our clients. Through the integrated
+                   patient communication tools and analysis, we have a seen a 40% drop in
+                    attrition rates for appointments. <br>
+                   A key example of a client we have worked with, saw a marked increase of 56% 
+                      in MCH visits once we set up our platform and follow on ANC visits.</p>
+                  </div>
+                      </div>
+                      <div class="treatment mt-3">
+                        <a href="#treatment" data-bs-toggle="collapse"  class="h4 fw-bold text-center" style="text-decoration: none; color: black;"> Clinical treatment</a> <small> click to view</small>
+                        <div id="treatment" class="collapse show">
+                         <p class="alert alert-success">Through peer review mechanisms that our platform supports, clinicians have been able to walk
+                          through their treatment choices as a collective and improve on the same. We have seen a reduction
+                          in mis-diagnosis as well as a reduction in erroneous lab and imaging results.</p>
+                          </div>
+                        </div>
+                        <div class="supply mt-3 mb-4">
+                          <a href="#supply" data-bs-toggle="collapse"  class="h4 fw-bold text-center" style="text-decoration: none; color: black;">Supply chain</a> <small> click to view</small>
+                          <div id="supply" class="collapse show">
+                           <p class="alert alert-success">A 90% reduction in stock outs and an equally significant reduction of 85% in purchase of short
+                            expiry drugs is a major plus of our platform. The ability to have a global view of their inventory has also enabled multi-location
+                            facilities to move around their stock to those facilities that require it. <br>
+                            The Authority has designed for your organization a 3-month 
+                              Proof of Concept for the CHMS to help your organization automate and digitize its healthcare management.
+                            </p>
+                            </div>
+                          </div>
+                             <strong>Kindly fill the below questionnaire to give more details on the HMS Proof of Concept:</strong>
+                             <p></p>
+                             <p> *Indicates required field</p>
+                             <form action="" method="post">
+                              {% csrf_token %}
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="mb-3">
+                                      <label for="county-name" class="form-label">1. Name of County*</label>
+                                      <input type="text" class="form-control" id="county-name" name="county" required>
+                                    </div>
+                                   
+                                  </div>
+                                  <div class="co-md-6">
+                                    <div class="mb-3">
+                                      <label for="facilities-number" class="form-label">2. Indicate the number of facilities and the KEPH level</label>
+                                      <input type="text" class="form-control" id="facilities-number" name="facility">
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="current-management" class="form-label">3. Please give a detailed description of how you currently manage your healthcare facilities</label>
+                                  <textarea class="form-control" id="current-management" rows="3" name="management"></textarea>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="mb-2">
+                                      <label for="using-system" class="form-label">4. Are you currently using any system in any of your healthcare facilities?</label>
+                                   <input type="radio" name="q1" value="yes"> Yes
+                                   <input type="radio" name="q1" value="no"> No
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="mb-2">
+                                      <label for="integrated-centralized" class="form-label">5. Are all your facilities integrated and centralized?</label>
+                                   <input type="radio" name="q2" value="yes"> Yes
+                                   <input type="radio" name="q2" value="no"> No
+                                   
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="mb-2">
+                                      <label for="advanced-reporting" class="form-label">6. Does your current offering provide you with advanced reporting and analytics?</label>
+                                      <input type="radio" name="q3" value="yes"> Yes
+                                      <input type="radio" name="q3" value="no"> No
+                                  
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="mb-3">
+                                      <label for="data-protection" class="form-label">7. Does your current solution adhere to the Data Protection act?</label>
+                                   <input type="radio" name="q4" value="yes"> Yes
+                                   <input type="radio" name="q4" value="no"> No
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="mb-3">
+                                  <label for="challenges" class="form-label">8. What are the challenges you currently face with your existing offering or method(s) of managing your facilities data?</label>
+                                  <textarea class="form-control" id="challenges" rows="3" name="challenges"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="specific-features" class="form-label">9.  Are there any specific features or functionalities you are looking for in the proof-of-concept solutions?</label>
+                               <input type="radio" name="q5" value="yes"> Yes
+                               <input type="radio" name="q5" value="no"> No
+                                <label for="specific-features" class="form-label"> b) If yes, kindly give a detailed description of what you would like to see.</label>
+                                <textarea class="form-control" id="specific-features" rows="3" name="features"></textarea>
+                              </div>
+                              <div class="mb-3">
+                                <label for="specific-features" class="form-label">11.	Are there any other comments or concerns that you would like to share with us?</label>
+                             <input type="radio" name="q6" value="yes"> Yes
+                             <input type="radio" name="q6" value="no"> No
+                              <label for="specific-features" class="form-label"> b) If yes, kindly provide details.</label>
+                              <textarea class="form-control" id="specific-features" rows="3"></textarea>
+                            </div>
+                                <div class="mb-3" >
+                                  <label for="specific-features" class="form-label">12.	Provide the details of the contact person for the POC </label>
+                                  <div class="row mb-3">
+                                    <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                      <label for="name" class="col-ms-3 form-label "> Name:</label>
+                                      <input type="text" class="form-control ms-6" id="name" name="name">
+                                    </div>
+                                    <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                      <label for="designation" class="col-form-label me-4">Designation:</label>
+                                      <input type="text" class="form-control ms-4" id="designation" name="designation">
+                                    </div>
+                                  </div>
+                                
+                                  <div class="row mb-3">
+                                    <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                      <label for="phone" class="col-me-5-sm-2 col-form-label">Phone number:</label>
+                                      <input type="tel" class="form-control" id="phone" name="phone">
+                                    </div>
+                                
+                                    
+                                    <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center">
+                                      <label for="email" class="col-me-2-sm-2 col-form-label">Email address:</label>
+                                      <input type="email" class="form-control" id="email" name="email">
+                                    </div>
+                                  </div>
+                                  <label for="specific-features" class="form-label"> <em> Kindly fill the questionnaire as soon as possible since the POC will be on First Come First served basis.
+                                     The contact people are Ms. Emmaculate Mutindi – 0795498606 and Richard Musau – 0739854103.</em> </label>
+                                </div>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                                <a href="" class="btn btn-info">Generate pdf</a>
+                                </form>
+                                </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+
